@@ -1,0 +1,30 @@
+@import "../utill/variable";
+@import "../utill/function.scss";
+@import "../utill/mixin";
+
+.navbar{
+    @include setTextColor($primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 1.5rem;
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li{
+            list-style: none;
+            a{
+                @include padding;
+                @include margin;
+                @include borderRaduis;
+                text-decoration: none;
+                color: #ffffff;
+                &:hover{
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+}

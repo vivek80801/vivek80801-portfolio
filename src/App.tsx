@@ -1,11 +1,14 @@
 import React from 'react';
+import "./scss/App.scss";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
-const App:React.FC =():JSX.Element=> {
+const App: React.FC = (): JSX.Element => {
   return (
-      <>
-      <h1>Hello, I am vivek</h1>
-      <h2>checkout some of my projects</h2>
-</>
+    <>
+        <Navbar/>
+        <Hero/>
+    </>
   );
 }
 

@@ -1,0 +1,17 @@
+@import "../utill/variable.scss";
+@import "../utill/function.scss";
+@import "../utill/mixin.scss";
+
+.hero{
+    @include setTextColor($secondary);
+    @include flex;
+    flex-direction:column;
+    width: 100vw;
+    height: 89vmin;
+    img{
+        @include margin;
+        height: 20vh;
+        width: 20vh;
+        border-radius: 50%;
+    }
+}

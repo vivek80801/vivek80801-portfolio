@@ -1,0 +1,11 @@
+@import "./mixin.scss";
+
+%btn {
+    @include padding;
+    @include borderRaduis;
+    font-weight:bold;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    margin: 0.75rem;
+}

@@ -1,0 +1,14 @@
+@import "./utill/variable";
+@import "./utill/function";
+@import "./utill/partial.scss";
+@import "./utill/mixin";
+@import "./utill/button.scss";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
