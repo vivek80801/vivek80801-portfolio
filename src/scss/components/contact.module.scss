@@ -2,17 +2,13 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.about{
-    @include flex;
-    @include padding;
-    @include setTextColor($secondary);
-    flex-direction: column;
+.container{
     h1{
         text-transform: capitalize;
     }
-    p{
+    form{
+        @include flex;
         @include padding;
-        @include margin;
-        width: 50%;
+        flex-direction: column;
     }
 }

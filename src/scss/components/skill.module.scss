@@ -1,0 +1,32 @@
+@import "../utill/variable.scss";
+@import "../utill/function.scss";
+@import "../utill/mixin.scss";
+
+.container {
+  @include padding;
+  @include flex;
+  @include setTextColor($tertiary);
+  flex-direction: column;
+  h1{
+      text-transform: capitalize;
+  }
+  .skills {
+    @include padding;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .skill {
+        @include margin;
+        @include padding;
+        @include setTextColor($secondary);
+        display: flex;
+        justify-content:space-around;
+        align-items:center;
+        flex-direction: column;
+        height: 30vh;
+        width: 30vh;
+        p{
+            overflow: auto;
+        }
+    }
+  }
+}

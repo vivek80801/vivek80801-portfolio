@@ -4,6 +4,7 @@
     @include padding;
     @include borderRaduis;
     font-weight:bold;
+    text-transform: capitalize;
     cursor: pointer;
     outline: none;
     border:none;
