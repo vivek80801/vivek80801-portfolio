@@ -2,13 +2,13 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.container{
-    h1{
-        text-transform: capitalize;
-    }
-    form{
-        @include flex;
-        @include padding;
-        flex-direction: column;
-    }
+.container {
+  h1 {
+    text-transform: capitalize;
+  }
+  form {
+    @include flex;
+    @include padding;
+    flex-direction: column;
+  }
 }

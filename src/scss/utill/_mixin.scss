@@ -1,32 +1,32 @@
 @mixin padding {
-    padding: 0.75rem;
+  padding: 0.75rem;
 }
 
 @mixin margin {
-    margin: 0.75rem
+  margin: 0.75rem;
 }
 
 @mixin borderRaduis {
-    border-radius: 00.75rem;
+  border-radius: 00.75rem;
 }
 
-@mixin setTextColor($color){
-    background-color: $color;
-    color: setBackgroundColor($color);
+@mixin setTextColor($color) {
+  background-color: $color;
+  color: setBackgroundColor($color);
 }
 
 @mixin flex {
-    display:flex;
-    justify-content: center;
-    align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin createBtn($color, $class){
-    .btn-#{$class} {
-        @extend %btn;
-        @include setTextColor($color);
-    }
-    .btn-#{$class}:hover {
-        @include setTextColor(lighten($color, 10))
-    }
+@mixin createBtn($color, $class) {
+  .btn-#{$class} {
+    @extend %btn;
+    @include setTextColor($color);
+  }
+  .btn-#{$class}:hover {
+    @include setTextColor(lighten($color, 10));
+  }
 }

@@ -2,13 +2,47 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.container{
-    @include flex;
-    @include padding;
-    flex-direction: column;
-    text-transform: capitalize;
-    .projects{
-        .project{
+.container {
+  @include setTextColor($tertiary);
+  @include flex;
+  @include padding;
+  flex-direction: column;
+  text-transform: capitalize;
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .project {
+      @include setTextColor($secondary);
+      @include padding;
+      @include margin;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      .sliders {
+        @include padding;
+        position: relative;
+        top: -20vh;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+          @include padding;
+          @include setTextColor($tertiary);
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          cursor: pointer;
         }
+      }
+      img {
+        width: 20vw;
+        height: 20vh;
+      }
+      a {
+        @include margin;
+        color: #fff;
+      }
     }
+  }
 }

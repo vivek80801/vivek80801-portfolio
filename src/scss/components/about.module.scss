@@ -2,17 +2,17 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.about{
-    @include flex;
+.about {
+  @include flex;
+  @include padding;
+  @include setTextColor($secondary);
+  flex-direction: column;
+  h1 {
+    text-transform: capitalize;
+  }
+  p {
     @include padding;
-    @include setTextColor($secondary);
-    flex-direction: column;
-    h1{
-        text-transform: capitalize;
-    }
-    p{
-        @include padding;
-        @include margin;
-        width: 50%;
-    }
+    @include margin;
+    width: 50%;
+  }
 }
