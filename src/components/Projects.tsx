@@ -12,12 +12,15 @@ const Projects: React.FC = (): JSX.Element => {
     <div id="projects" className={project.container}>
       <h1>my projects</h1>
       <div className={project.projects}>
-        {myProjects.map(({ id, name, imgs, link, imgNum }) => (
+        {myProjects.map(({ id, name, imgs, link, imgNum, githubLink }) => (
           <div className={project.project} key={id}>
             <h1>{name}</h1>
             <img src={`/assets/${imgs[imgNum]}.png`} alt={name} />
             <a target="_blank" rel="noopener noreferrer" href={link}>
               {name}
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href={githubLink}>
+             go to source code 
             </a>
             <div className={project.sliders}>
               <button
@@ -30,7 +33,11 @@ const Projects: React.FC = (): JSX.Element => {
                             name,
                             imgs,
                             link,
-                            imgNum: imgNum === imgs.length - 1 ? 0 : imgNum + 1,
+                            githubLink,
+                            imgNum:
+                              imgNum <= 0
+                                ? (imgNum = imgs.length - 1)
+                                : imgNum - 1,
                           }
                         : {
                             id: pro.id,
@@ -38,12 +45,13 @@ const Projects: React.FC = (): JSX.Element => {
                             imgs: pro.imgs,
                             link: pro.link,
                             imgNum: pro.imgNum,
+                            githubLink: pro.githubLink,
                           }
                     ),
                   ])
                 }
               >
-                &gt;
+                &lt;
               </button>
               <button
                 onClick={() =>
@@ -55,6 +63,7 @@ const Projects: React.FC = (): JSX.Element => {
                             name,
                             imgs,
                             link,
+                            githubLink,
                             imgNum: imgNum === imgs.length - 1 ? 0 : imgNum + 1,
                           }
                         : {
@@ -63,12 +72,13 @@ const Projects: React.FC = (): JSX.Element => {
                             imgs: pro.imgs,
                             link: pro.link,
                             imgNum: pro.imgNum,
+                            githubLink: pro.githubLink,
                           }
                     ),
                   ])
                 }
               >
-                &lt;
+                &gt;
               </button>
             </div>
           </div>

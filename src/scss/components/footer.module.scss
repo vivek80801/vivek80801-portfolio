@@ -1,0 +1,21 @@
+@import "../utill/variable.scss";
+@import "../utill/function.scss";
+@import "../utill/mixin.scss";
+
+.footer {
+  @include padding;
+  @include flex;
+  @include setTextColor($tertiary);
+  flex-direction: column;
+  .social {
+      @include padding;
+      @include margin;
+    a {
+      @include padding;
+      color: #fff;
+      &:hover{
+          color:#000;
+      }
+    }
+  }
+}

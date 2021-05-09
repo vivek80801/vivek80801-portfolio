@@ -4,6 +4,7 @@ export interface IProject {
   imgs: string[];
   link: string;
   imgNum: number;
+  githubLink: string;
 }
 
 export const projects: IProject[] = [
@@ -13,6 +14,7 @@ export const projects: IProject[] = [
     imgs: ["student-app-home", "student-app-student", "student-app-teacher"],
     link: "https://stundent-app.netlify.app/",
     imgNum: 0,
+    githubLink: "https://github.com/vivek80801/stundent-app/"
   },
   {
     id: 2,
@@ -31,6 +33,7 @@ export const projects: IProject[] = [
     ],
     link: "https://vivek80801-cloth-shop.netlify.app/",
     imgNum: 0,
+    githubLink: "https://github.com/vivek80801/cloth-shop/"
   },
   {
     id: 3,
@@ -43,5 +46,6 @@ export const projects: IProject[] = [
     ],
     link: "https://vishavkarma-foods.netlify.app/",
     imgNum: 0,
+    githubLink: "https://github.com/vivek80801/ecommarce-pwa/"
   },
 ];
