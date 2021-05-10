@@ -4,7 +4,7 @@ import { SiGmail } from "react-icons/si";
 import footer from "../scss/components/footer.module.scss";
 
 const Footer: React.FC = (): JSX.Element => {
-  const size = 70;
+  const size = 40;
   return (
     <div id="social" className={footer.footer}>
       <h1>connect with me</h1>

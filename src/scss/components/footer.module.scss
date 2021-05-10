@@ -7,14 +7,17 @@
   @include flex;
   @include setTextColor($tertiary);
   flex-direction: column;
+  h1{
+      text-transform: capitalize;
+  }
   .social {
     @include padding;
     @include margin;
     a {
       @include padding;
-      color: #fff;
+      color: #000;
       &:hover {
-        color: #000;
+        color: #333;
       }
     }
   }

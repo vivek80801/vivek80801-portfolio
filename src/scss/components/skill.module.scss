@@ -26,6 +26,7 @@
     .skill {
       @include margin;
       @include padding;
+      @include borderRaduis;
       @include setTextColor($secondary);
       display: flex;
       justify-content: space-around;

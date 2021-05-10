@@ -27,6 +27,6 @@
     @include setTextColor($color);
   }
   .btn-#{$class}:hover {
-    @include setTextColor(lighten($color, 10));
+    @include setTextColor(lighten($color, 5%));
   }
 }

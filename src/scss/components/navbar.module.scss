@@ -24,11 +24,11 @@
       a {
         @include padding;
         @include margin;
+        @include setTextColor($primary);
         @include borderRaduis;
         text-decoration: none;
-        color: #ffffff;
         &:hover {
-          background-color: $secondary;
+            @include setTextColor($secondary);
         }
       }
     }
@@ -60,7 +60,7 @@
     }
   }
   ul {
-    @include setTextColor(#f2f2f2);
+    @include setTextColor($tertiary);
     @include padding;
     width: 100%;
     position: absolute;
@@ -71,6 +71,7 @@
       @include padding;
       list-style: none;
       a {
+        @include setTextColor($tertiary);
         text-transform: capitalize;
         text-decoration: none;
       }
