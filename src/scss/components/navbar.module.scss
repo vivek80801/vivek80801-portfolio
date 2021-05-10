@@ -2,16 +2,19 @@
 @import "../utill/function.scss";
 @import "../utill/mixin";
 
-.navbar {
+.desktop {
   @include setTextColor($primary);
   position: sticky;
-  top:0;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
   padding: 1.5rem;
   z-index: 1;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
   ul {
     display: flex;
     justify-content: center;
@@ -29,5 +32,56 @@
         }
       }
     }
+  }
+  img {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+  }
+}
+
+.mobile {
+  @include padding;
+  @include setTextColor($primary);
+  position: sticky;
+  top: 0;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  .lines {
+    @include padding;
+    .line {
+      @include margin;
+      @include borderRaduis;
+      height: 1vh;
+      width: 10vw;
+      background-color: #fff;
+    }
+  }
+  ul {
+    @include setTextColor(#f2f2f2);
+    @include padding;
+    width: 100%;
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    flex-direction: column;
+    li {
+      @include padding;
+      list-style: none;
+      a {
+        text-transform: capitalize;
+        text-decoration: none;
+      }
+    }
+  }
+  img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 700px) {
+    display: flex;
   }
 }
