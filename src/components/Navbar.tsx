@@ -9,22 +9,22 @@ const Navbar: React.FC = (): JSX.Element => {
         <img src="/assets/github-avtar.png" alt="vivek80801" />
         <ul>
           <li>
-            <a href="!#">home</a>
+            <a href="#">home</a>
           </li>
           <li>
-            <a href="!#skill">skill</a>
+            <a href="#skill">skill</a>
           </li>
           <li>
-            <a href="!#about">about</a>
+            <a href="#about">about</a>
           </li>
           <li>
-            <a href="!#projects">project</a>
+            <a href="#projects">project</a>
           </li>
           <li>
-            <a href="!#contact">contact me</a>
+            <a href="#contact">contact me</a>
           </li>
           <li>
-            <a href="!#social">social</a>
+            <a href="#social">social</a>
           </li>
         </ul>
       </nav>
@@ -37,22 +37,22 @@ const Navbar: React.FC = (): JSX.Element => {
         </div>
         <ul style={showNav ? { display: "flex" } : { display: "none" }}>
           <li>
-            <a href="!#">home</a>
+            <a href="#">home</a>
           </li>
           <li>
-            <a href="!#skill">skill</a>
+            <a href="#skill">skill</a>
           </li>
           <li>
-            <a href="!#about">about</a>
+            <a href="#about">about</a>
           </li>
           <li>
-            <a href="!#projects">project</a>
+            <a href="#projects">project</a>
           </li>
           <li>
-            <a href="!#contact">contact me</a>
+            <a href="#contact">contact me</a>
           </li>
           <li>
-            <a href="!#social">social</a>
+            <a href="#social">social</a>
           </li>
         </ul>
       </nav>

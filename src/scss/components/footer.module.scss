@@ -15,9 +15,9 @@
     @include margin;
     a {
       @include padding;
-      color: #000;
+      color: #fff;
       &:hover {
-        color: #333;
+        color: $secondary;
       }
     }
   }
