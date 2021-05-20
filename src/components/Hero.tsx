@@ -7,10 +7,10 @@ const Hero: React.FC = (): JSX.Element => {
       <img src="/assets/github-avtar.png" alt="profile" />
       <h1>Hello, I am vivek.</h1>
       <div className="buttons">
-        <a href="!#projects">
+        <a href="#projects">
           <button className="btn-primary">projects</button>
         </a>
-        <a href="!#contact">
+        <a href="#contact">
           <button className="btn-quaternary">contact me</button>
         </a>
       </div>
