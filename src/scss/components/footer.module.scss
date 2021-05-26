@@ -5,7 +5,7 @@
 .footer {
   @include padding;
   @include flex;
-  @include setTextColor($tertiary);
+  @include setTextColor($secondary);
   flex-direction: column;
   h1{
       text-transform: capitalize;
@@ -17,7 +17,7 @@
       @include padding;
       color: #fff;
       &:hover {
-        color: $secondary;
+        color: $quaternary;
       }
     }
   }

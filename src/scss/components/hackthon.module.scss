@@ -1,0 +1,32 @@
+@import "../utill/_variable.scss";
+@import "../utill/_function.scss";
+@import "../utill/_mixin.scss";
+
+.hackthon {
+  @include setTextColor($secondary);
+  @include padding;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .video {
+    @include padding;
+    @include margin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+      @include padding;
+    }
+  }
+  video {
+    height: 50vh;
+    width: 50vw;
+  }
+  iframe {
+    height: 50vh;
+    width: 50vw;
+  }
+}

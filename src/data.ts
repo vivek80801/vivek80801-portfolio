@@ -7,6 +7,12 @@ export interface IProject {
   githubLink: string;
 }
 
+export interface IHackthon {
+  name: string;
+  video: string;
+  repo: string;
+}
+
 export const projects: IProject[] = [
   {
     id: 1,
@@ -14,7 +20,7 @@ export const projects: IProject[] = [
     imgs: ["student-app-home", "student-app-student", "student-app-teacher"],
     link: "https://stundent-app.netlify.app/",
     imgNum: 0,
-    githubLink: "https://github.com/vivek80801/studentApp"
+    githubLink: "https://github.com/vivek80801/studentApp",
   },
   {
     id: 2,
@@ -33,7 +39,7 @@ export const projects: IProject[] = [
     ],
     link: "https://vivek80801-cloth-shop.netlify.app/",
     imgNum: 0,
-    githubLink: "https://github.com/vivek80801/cloth-shop"
+    githubLink: "https://github.com/vivek80801/cloth-shop",
   },
   {
     id: 3,
@@ -46,6 +52,19 @@ export const projects: IProject[] = [
     ],
     link: "https://vishavkarma-foods.netlify.app/",
     imgNum: 0,
-    githubLink: "https://github.com/vivek80801/my-ecommarce-pwa"
+    githubLink: "https://github.com/vivek80801/my-ecommarce-pwa",
+  },
+];
+
+export const myHackthons: IHackthon[] = [
+  {
+    name: "vegetable-app",
+    video: "https://youtube.com/embed/PHg7sYH2H44",
+    repo: "https://github.com/vivek80801/vegetable-app",
+  },
+  {
+    name: "trivia-chat",
+    video: "https://youtube.com/embed/CMQBaPQqC8U",
+    repo: "https://github.com/AryamanSarraf/Trivial-Chat",
   },
 ];

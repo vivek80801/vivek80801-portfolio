@@ -6,39 +6,41 @@ import footer from "../scss/components/footer.module.scss";
 const Footer: React.FC = (): JSX.Element => {
   const size = 40;
   return (
-    <div id="social" className={footer.footer}>
-      <h1>connect with me</h1>
-      <div className={footer.social}>
-        <a
-          href="https://github.com/vivek80801/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub size={size} />
-        </a>
-        <a
-          href="https://twitter.com/vivek80801/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTwitterSquare size={size} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/vivek-kumar-1983a8202/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedinIn size={size} />
-        </a>
-        <a
-          href="mailto:vivek80801@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SiGmail size={size} />
-        </a>
+    <footer>
+      <div id="social" className={footer.footer}>
+        <h1>connect with me</h1>
+        <div className={footer.social}>
+          <a
+            href="https://github.com/vivek80801/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub size={size} />
+          </a>
+          <a
+            href="https://twitter.com/vivek80801/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitterSquare size={size} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/vivek-kumar-1983a8202/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedinIn size={size} />
+          </a>
+          <a
+            href="mailto:vivek80801@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiGmail size={size} />
+          </a>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

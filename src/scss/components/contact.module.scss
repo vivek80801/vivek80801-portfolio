@@ -3,7 +3,7 @@
 @import "../utill/mixin.scss";
 
 .container {
-    @include setTextColor($secondary);
+    @include setTextColor($tertiary);
     @include flex;
     flex-direction: column;
     padding: 2rem;
