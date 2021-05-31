@@ -4,7 +4,7 @@ import { myHackthons } from "../data";
 
 const Hackthon: React.FC = (): JSX.Element => {
   return (
-    <section>
+    <section id="hackthon">
       <div className={hackthon.hackthon}>
         <h1>hackthon</h1>
         {myHackthons.map((myHackthon, idx) => (

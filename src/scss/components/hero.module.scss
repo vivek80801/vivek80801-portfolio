@@ -8,10 +8,65 @@
   flex-direction: column;
   width: 100%;
   height: 90vh;
-  img {
-    @include margin;
-    height: 20vh;
-    width: 20vh;
+  .img1 {
+    @include setTextColor(lighten(darken($primary, 20), 5));
     border-radius: 50%;
+    padding: 1rem;
+    /*animation: fadeIn 1s ease-in 1s 1 direction farwords;*/
+    animation: fadeIn 1s ease 1s infinite farwords;
+    .img2 {
+      @include setTextColor(lighten(darken($primary, 20), 10));
+      border-radius: 50%;
+      padding: 0.9rem;
+      .img3 {
+        @include setTextColor(lighten(darken($primary, 20), 15));
+        border-radius: 50%;
+        padding: 0.8rem;
+        .img4 {
+          @include setTextColor(lighten(darken($primary, 20), 20));
+          border-radius: 50%;
+          padding: 0.7rem;
+          .img5 {
+            @include setTextColor(lighten(darken($primary, 20), 25));
+            border-radius: 50%;
+            padding: 0.6rem;
+            .img6 {
+              @include setTextColor(lighten(darken($primary, 20), 30));
+              border-radius: 50%;
+              padding: 0.5rem;
+              .img7 {
+                @include setTextColor(lighten(darken($primary, 20), 35));
+                border-radius: 50%;
+                padding: 0.4rem;
+                .img8 {
+                  @include setTextColor(lighten(darken($primary, 20), 40));
+                  border-radius: 50%;
+                  padding: 0.3rem;
+                  .img9 {
+                    @include setTextColor(lighten(darken($primary, 20), 45));
+                    border-radius: 50%;
+                    padding: 0.2rem;
+                    img {
+                      height: 20vh;
+                      width: 20vh;
+                      border-radius: 50%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

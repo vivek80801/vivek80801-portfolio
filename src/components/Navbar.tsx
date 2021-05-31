@@ -21,6 +21,9 @@ const Navbar: React.FC = (): JSX.Element => {
             <a href="#projects">project</a>
           </li>
           <li>
+            <a href="#hackthon">hackthon</a>
+          </li>
+          <li>
             <a href="#contact">contact me</a>
           </li>
           <li>
@@ -47,6 +50,9 @@ const Navbar: React.FC = (): JSX.Element => {
           </li>
           <li>
             <a href="#projects">project</a>
+          </li>
+          <li>
+            <a href="#hackthon">hackthon</a>
           </li>
           <li>
             <a href="#contact">contact me</a>

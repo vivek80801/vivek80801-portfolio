@@ -66,7 +66,50 @@
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <div class="loading"><h1>Loading....</h1></div>
+      <canvas id="loading"></canvas>
     </div>
+
+    <script>
+      const canvas = document.querySelector("#loading");
+      const ctx = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      ctx.globalCompositeOperation = "destination-over";
+      let number = 0;
+      let scale = 10;
+      let hue = Math.random() * 360;
+
+      const drawCircle = () => {
+        let angle = number * 8;
+        let r = scale * Math.sqrt(number);
+        let x = r * Math.sin(angle) + canvas.width / 2;
+        let y = r * Math.cos(angle) + canvas.height / 2;
+
+        ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+        ctx.strokeStyle = "#fff";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        if (hue >= 360) {
+          hue = Math.random() * 360;
+        }
+
+        number++;
+        hue += 5;
+      };
+
+      const animate = () => {
+        if (number === 1000) {
+          return;
+        }
+        drawCircle();
+        requestAnimationFrame(animate);
+      };
+
+      animate();
+    </script>
   </body>
 </html>
