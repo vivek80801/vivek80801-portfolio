@@ -9,43 +9,50 @@
   width: 100%;
   height: 90vh;
   .img1 {
-    @include setTextColor(lighten(darken($primary, 20), 5));
+    background-color: transparent;
     border-radius: 50%;
     padding: 1rem;
-    /*animation: fadeIn 1s ease-in 1s 1 direction farwords;*/
-    animation: fadeIn 1s ease 1s infinite farwords;
+    animation: fadeIn1 1s ease-in 9s infinite;
     .img2 {
-      @include setTextColor(lighten(darken($primary, 20), 10));
       border-radius: 50%;
+      background-color: transparent;
+      animation: fadeIn2 1s ease-in 8s infinite;
       padding: 0.9rem;
       .img3 {
-        @include setTextColor(lighten(darken($primary, 20), 15));
         border-radius: 50%;
+        background-color: transparent;
         padding: 0.8rem;
+        animation: fadeIn3 1s ease-in 7s infinite;
         .img4 {
-          @include setTextColor(lighten(darken($primary, 20), 20));
           border-radius: 50%;
           padding: 0.7rem;
+          background-color: transparent;
+          animation: fadeIn4 1s ease-in 6s infinite;
           .img5 {
-            @include setTextColor(lighten(darken($primary, 20), 25));
             border-radius: 50%;
             padding: 0.6rem;
+            background-color: transparent;
+            animation: fadeIn5 1s ease-in 5s infinite;
             .img6 {
-              @include setTextColor(lighten(darken($primary, 20), 30));
               border-radius: 50%;
               padding: 0.5rem;
+              animation: fadeIn6 1s ease-in 4s infinite;
+              background-color: transparent;
               .img7 {
-                @include setTextColor(lighten(darken($primary, 20), 35));
                 border-radius: 50%;
                 padding: 0.4rem;
+                background-color: transparent;
+                animation: fadeIn7 1s ease-in 3s infinite;
                 .img8 {
-                  @include setTextColor(lighten(darken($primary, 20), 40));
                   border-radius: 50%;
                   padding: 0.3rem;
+                  background-color: transparent;
+                  animation: fadeIn8 1s ease-in 2s infinite;
                   .img9 {
-                    @include setTextColor(lighten(darken($primary, 20), 45));
                     border-radius: 50%;
+                    background-color: transparent;
                     padding: 0.2rem;
+                    animation: fadeIn9 1s ease-in 1s infinite;
                     img {
                       height: 20vh;
                       width: 20vh;
@@ -62,11 +69,13 @@
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+@for $i from 1 to 10 {
+  @keyframes fadeIn#{$i} {
+    0% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: lighten(darken($primary, 20), ($i * 5));
+    }
   }
 }
