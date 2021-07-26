@@ -1,6 +1,6 @@
 import React from "react";
-import project from "../scss/components/projects.module.scss";
-import { projects, IProject } from "../data";
+import project from "../../scss/components/projects.module.scss";
+import { projects, IProject } from "../../data";
 
 const Projects: React.FC = (): JSX.Element => {
   const [myProjects, setMyProjects] = React.useState<IProject[]>([]);

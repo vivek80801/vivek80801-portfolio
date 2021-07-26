@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaTwitterSquare, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import footer from "../scss/components/footer.module.scss";
+import footer from "../../scss/components/footer.module.scss";
 
 const Footer: React.FC = (): JSX.Element => {
   const size = 40;

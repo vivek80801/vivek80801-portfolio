@@ -8,7 +8,7 @@ import {
   FaReact,
 } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
-import skill from "../scss/components/skill.module.scss";
+import skill from "../../scss/components/skill.module.scss";
 
 const Skill: React.FC = (): JSX.Element => {
   const size = 70;

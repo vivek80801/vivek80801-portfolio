@@ -1,6 +1,6 @@
 import React from "react";
-import hackthon from "../scss/components/hackthon.module.scss";
-import { myHackthons } from "../data";
+import hackthon from "../../scss/components/hackthon.module.scss";
+import { myHackthons } from "../../data";
 
 const Hackthon: React.FC = (): JSX.Element => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import navbar from "../scss/components/navbar.module.scss";
+import navbar from "../../scss/components/navbar.module.scss";
 
 const Navbar: React.FC = (): JSX.Element => {
   const [showNav, setShowNav] = React.useState(false);

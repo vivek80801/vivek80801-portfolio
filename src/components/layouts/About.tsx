@@ -1,5 +1,5 @@
 import React from "react";
-import about from "../scss/components/about.module.scss";
+import about from "../../scss/components/about.module.scss";
 
 const About: React.FC = (): JSX.Element => {
   return (

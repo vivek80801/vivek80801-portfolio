@@ -1,5 +1,5 @@
 import React from "react";
-import contact from "../scss/components/contact.module.scss";
+import contact from "../../scss/components/contact.module.scss";
 
 const Contact: React.FC = (): JSX.Element => {
   return (

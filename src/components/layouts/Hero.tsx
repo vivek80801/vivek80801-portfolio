@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../scss/components/hero.module.scss";
+import hero from "../../scss/components/hero.module.scss";
 
 const Hero: React.FC = (): JSX.Element => {
   return (
