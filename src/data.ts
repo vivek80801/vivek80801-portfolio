@@ -43,7 +43,7 @@ export const projects: IProject[] = [
   },
   {
     id: 3,
-    name: "ecommarce",
+    name: "food app",
     imgs: [
       "vishavkarma-foods-home",
       "vishawkarma-products",

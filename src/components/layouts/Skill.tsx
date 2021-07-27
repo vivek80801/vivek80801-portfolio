@@ -9,12 +9,19 @@ import {
 } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import skill from "../../scss/components/skill.module.scss";
+import { IThemeContext, ThemeChangerContext } from "../context";
 
 const Skill: React.FC = (): JSX.Element => {
+  const { themes, dispatch } = React.useContext<IThemeContext>(
+    ThemeChangerContext
+  );
   const size = 70;
   return (
     <section>
-      <div id="skill" className={skill.container}>
+      <div
+        id="skill"
+        className={themes === "default" ? skill.container : skill.containerBlue}
+      >
         <h1>my skills</h1>
         <div className={skill.skills}>
           <div className={skill.skill}>
@@ -34,12 +41,12 @@ const Skill: React.FC = (): JSX.Element => {
           <div className={skill.skill}>
             <FaJs size={size} />
             <p>
-              Javascript is a programming lanuage which is used for many things.
-              Before nodejs, It was only a tool for adding intracations on
-              websites. But, when nodejs was invented. Javascript can do
+              JavaScript is a programming language which is used for many
+              things. Before nodejs, It was only a tool for adding interactions
+              on websites. But, when nodejs was invented. JavaScript can do
               everything. You can create mobile applications, desktop
               applications, web applications, you can also write server side
-              code with javascript.
+              code with JavaScript.
             </p>
           </div>
           <div className={skill.skill}>
@@ -52,7 +59,7 @@ const Skill: React.FC = (): JSX.Element => {
           <div className={skill.skill}>
             <FaSass size={size} />
             <p>
-              Sass is preprocesser for css. Sass gets compiled to css. Browser
+              Sass is preprocessor for css. Sass gets compiled to css. Browser
               does not understand sass.
             </p>
           </div>
@@ -60,8 +67,8 @@ const Skill: React.FC = (): JSX.Element => {
             <FaReact size={size} />
             <p>
               Reactjs is a library of javascript which is used to create single
-              page application(SPAs). It is created by facbook and maintained by
-              open source community.
+              page application(SPAs). It is created by facebook and maintained
+              by open source community.
             </p>
           </div>
           <div className={skill.skill}>

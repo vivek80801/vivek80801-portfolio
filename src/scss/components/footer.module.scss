@@ -2,13 +2,13 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.footer {
+%footer {
   @include padding;
   @include flex;
   @include setTextColor($secondary);
   flex-direction: column;
-  h1{
-      text-transform: capitalize;
+  h1 {
+    text-transform: capitalize;
   }
   .social {
     @include padding;
@@ -18,6 +18,22 @@
       color: #fff;
       &:hover {
         color: $quaternary;
+      }
+    }
+  }
+}
+
+.footer {
+  @extend %footer;
+}
+
+.footerBlue {
+  @extend %footer;
+  @include setTextColor($secondaryBlue);
+  .social {
+    a {
+      &:hover {
+        color: $quaternaryBlue;
       }
     }
   }

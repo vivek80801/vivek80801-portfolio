@@ -1,11 +1,21 @@
 import React from "react";
+import { FaAngleDown } from "react-icons/fa";
 import navbar from "../../scss/components/navbar.module.scss";
+import { ThemeChangerContext, IThemeContext } from "../context";
 
 const Navbar: React.FC = (): JSX.Element => {
   const [showNav, setShowNav] = React.useState(false);
+  const [showThemes, setShowThemes] = React.useState(false);
+  const { themes, dispatch } = React.useContext<IThemeContext>(
+    ThemeChangerContext
+  );
   return (
     <>
-      <nav className={navbar.desktop}>
+      <nav
+        className={
+          themes === "blue" ? navbar.desktopBlue : navbar.desktopDefault
+        }
+      >
         <img src="/assets/github-avtar.png" alt="vivek80801" />
         <ul>
           <li>
@@ -29,9 +39,27 @@ const Navbar: React.FC = (): JSX.Element => {
           <li>
             <a href="#social">social</a>
           </li>
+          <li>
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowThemes(!showThemes);
+              }}
+            >
+              Themes <FaAngleDown size={20} />
+            </a>
+            {showThemes && (
+              <ul>
+                <li onClick={() => dispatch({ name: "default" })}>default</li>
+                <li onClick={() => dispatch({ name: "blue" })}>blue</li>
+                <li></li>
+              </ul>
+            )}
+          </li>
         </ul>
       </nav>
-      <nav className={navbar.mobile}>
+      <nav className={themes === "default" ? navbar.mobile : navbar.mobileBlue}>
         <img src="/assets/github-avtar.png" alt="vivek80801" />
         <div className={navbar.lines} onClick={() => setShowNav(!showNav)}>
           <div className={navbar.line}></div>
@@ -59,6 +87,24 @@ const Navbar: React.FC = (): JSX.Element => {
           </li>
           <li>
             <a href="#social">social</a>
+          </li>
+          <li>
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowThemes(!showThemes);
+              }}
+            >
+              Themes <FaAngleDown size={20} />
+            </a>
+            {showThemes && (
+              <ul>
+                <li onClick={() => dispatch({ name: "default" })}>default</li>
+                <li onClick={() => dispatch({ name: "blue" })}>blue</li>
+                <li></li>
+              </ul>
+            )}
           </li>
         </ul>
       </nav>

@@ -2,11 +2,11 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.container {
-    @include setTextColor($tertiary);
-    @include flex;
-    flex-direction: column;
-    padding: 2rem;
+%container {
+  @include setTextColor($tertiary);
+  @include flex;
+  flex-direction: column;
+  padding: 2rem;
   h1 {
     text-transform: capitalize;
   }
@@ -16,11 +16,18 @@
     flex-direction: column;
     input[type="text"],
     input[type="email"],
-    textarea{
-        @include padding;
-        @include margin;
-        border:none;
-        outline:none;
+    textarea {
+      @include padding;
+      @include margin;
+      border: none;
+      outline: none;
     }
   }
+}
+.container {
+  @extend %container;
+}
+.containerBlue {
+  @extend %container;
+  @include setTextColor($tertiaryBlue);
 }

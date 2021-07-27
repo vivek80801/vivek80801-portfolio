@@ -2,7 +2,7 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.container {
+%container {
   @include setTextColor($tertiary);
   @include flex;
   @include padding;
@@ -12,10 +12,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     @media screen and (max-width: 750px) {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
     .project {
       @include setTextColor($secondary);
@@ -54,6 +54,25 @@
       a {
         @include margin;
         color: #fff;
+      }
+    }
+  }
+}
+
+.container {
+  @extend %container;
+}
+
+.containerBlue {
+  @extend %container;
+  @include setTextColor($tertiaryBlue);
+  .projects {
+    .project {
+      @include setTextColor($secondaryBlue);
+      .sliders {
+        button {
+          @include setTextColor($tertiaryBlue);
+        }
       }
     }
   }

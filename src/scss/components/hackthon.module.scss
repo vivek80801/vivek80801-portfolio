@@ -1,8 +1,7 @@
 @import "../utill/_variable.scss";
 @import "../utill/_function.scss";
 @import "../utill/_mixin.scss";
-
-.hackthon {
+%hackthon {
   @include setTextColor($secondary);
   @include padding;
   text-transform: capitalize;
@@ -29,4 +28,11 @@
     height: 50vh;
     width: 50vw;
   }
+}
+.hackthon {
+  @extend %hackthon;
+}
+.hackthonBlue {
+  @extend %hackthon;
+  @include setTextColor($secondaryBlue);
 }

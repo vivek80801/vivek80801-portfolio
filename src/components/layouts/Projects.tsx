@@ -1,16 +1,25 @@
 import React from "react";
 import project from "../../scss/components/projects.module.scss";
 import { projects, IProject } from "../../data";
+import { IThemeContext, ThemeChangerContext } from "../context";
 
 const Projects: React.FC = (): JSX.Element => {
   const [myProjects, setMyProjects] = React.useState<IProject[]>([]);
+  const { themes, dispatch } = React.useContext<IThemeContext>(
+    ThemeChangerContext
+  );
 
   React.useEffect(() => {
     setMyProjects([...projects]);
   }, []);
   return (
     <section>
-      <div id="projects" className={project.container}>
+      <div
+        id="projects"
+        className={
+          themes === "default" ? project.container : project.containerBlue
+        }
+      >
         <h1>my projects</h1>
         <div className={project.projects}>
           {myProjects.map(({ id, name, imgs, link, imgNum, githubLink }) => (

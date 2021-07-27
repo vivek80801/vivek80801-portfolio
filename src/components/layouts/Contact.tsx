@@ -1,10 +1,19 @@
 import React from "react";
 import contact from "../../scss/components/contact.module.scss";
+import { IThemeContext, ThemeChangerContext } from "../context";
 
 const Contact: React.FC = (): JSX.Element => {
+  const { themes, dispatch } = React.useContext<IThemeContext>(
+    ThemeChangerContext
+  );
   return (
     <section>
-      <div id="contact" className={contact.container}>
+      <div
+        id="contact"
+        className={
+          themes === "default" ? contact.container : contact.containerBlue
+        }
+      >
         <h1>contact me</h1>
         <form method="POST" name="contact-form" data-netlify="true">
           <input type="hidden" name="form-name" value="contact-form" />
@@ -36,7 +45,11 @@ const Contact: React.FC = (): JSX.Element => {
               placeholder="Enter your message"
             ></textarea>
           </div>
-          <input className="btn-primary" type="submit" value="submit" />
+          <input
+            className={themes === "default" ? "btn-primary" : "btn-primaryBlue"}
+            type="submit"
+            value="submit"
+          />
         </form>
       </div>
     </section>

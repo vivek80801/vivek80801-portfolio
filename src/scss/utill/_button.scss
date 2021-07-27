@@ -2,3 +2,8 @@
 @include createBtn($secondary, secondary);
 @include createBtn($tertiary, tertiary);
 @include createBtn($quaternary, quaternary);
+
+@include createBtn($primaryBlue, primaryBlue);
+@include createBtn($secondaryBlue, secondaryBlue);
+@include createBtn($tertiaryBlue, tertiaryBlue);
+@include createBtn($quaternaryBlue, quaternaryBlue);

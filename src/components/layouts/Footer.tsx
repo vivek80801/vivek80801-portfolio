@@ -2,12 +2,19 @@ import React from "react";
 import { FaGithub, FaTwitterSquare, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import footer from "../../scss/components/footer.module.scss";
+import { IThemeContext, ThemeChangerContext } from "../context";
 
 const Footer: React.FC = (): JSX.Element => {
+  const { themes, dispatch } = React.useContext<IThemeContext>(
+    ThemeChangerContext
+  );
   const size = 40;
   return (
     <footer>
-      <div id="social" className={footer.footer}>
+      <div
+        id="social"
+        className={themes === "default" ? footer.footer : footer.footerBlue}
+      >
         <h1>connect with me</h1>
         <div className={footer.social}>
           <a

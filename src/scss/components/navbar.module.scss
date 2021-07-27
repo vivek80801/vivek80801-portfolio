@@ -2,7 +2,7 @@
 @import "../utill/function.scss";
 @import "../utill/mixin";
 
-.desktop {
+%desktop {
   @include setTextColor($primary);
   position: sticky;
   top: 0;
@@ -12,7 +12,7 @@
   text-transform: capitalize;
   padding: 1.5rem;
   z-index: 1;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 950px) {
     display: none;
   }
   ul {
@@ -21,14 +21,31 @@
     align-items: center;
     li {
       list-style: none;
+      ul {
+        @include setTextColor(darken($primary, 2));
+        @include borderRaduis;
+        position: absolute;
+        top: 11vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        li {
+          @include padding;
+          cursor: pointer;
+          &:hover {
+            @include setTextColor(lighten($primary, 1));
+          }
+        }
+      }
       a {
+        @include setTextColor($primary);
         @include padding;
         @include margin;
-        @include setTextColor($primary);
         @include borderRaduis;
         text-decoration: none;
         &:hover {
-            @include setTextColor($secondary);
+          @include setTextColor($secondary);
         }
       }
     }
@@ -40,7 +57,33 @@
   }
 }
 
-.mobile {
+.desktopDefault {
+  @extend %desktop;
+}
+.desktopBlue {
+  @extend %desktop;
+  @include setTextColor($primaryBlue);
+  ul {
+    li {
+      a {
+        @include setTextColor($primaryBlue);
+        &:hover {
+          @include setTextColor($secondaryBlue);
+        }
+      }
+      ul {
+        @include setTextColor(darken($primaryBlue, 2));
+        li {
+          &:hover {
+            @include setTextColor(lighten($primaryBlue, 1));
+          }
+        }
+      }
+    }
+  }
+}
+
+%mobile {
   @include padding;
   @include setTextColor($primary);
   position: sticky;
@@ -75,6 +118,15 @@
         text-transform: capitalize;
         text-decoration: none;
       }
+      ul {
+        @include setTextColor(darken($primary, 2));
+        top: 42vh;
+        li {
+          &:hover {
+            @include setTextColor(lighten($primary, 1));
+          }
+        }
+      }
     }
   }
   img {
@@ -82,7 +134,31 @@
     height: 15vw;
     border-radius: 50%;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 950px) {
     display: flex;
+  }
+}
+.mobile {
+  @extend %mobile;
+}
+
+.mobileBlue {
+  @extend %mobile;
+  @include setTextColor($primaryBlue);
+  ul {
+    @include setTextColor($tertiaryBlue);
+    li {
+      a {
+        @include setTextColor($tertiaryBlue);
+      }
+      ul {
+        @include setTextColor(darken($primaryBlue, 2));
+        li {
+          &:hover {
+            @include setTextColor(lighten($primaryBlue, 1));
+          }
+        }
+      }
+    }
   }
 }

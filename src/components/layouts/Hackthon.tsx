@@ -1,11 +1,19 @@
 import React from "react";
 import hackthon from "../../scss/components/hackthon.module.scss";
 import { myHackthons } from "../../data";
+import { IThemeContext, ThemeChangerContext } from "../context";
 
 const Hackthon: React.FC = (): JSX.Element => {
+  const { themes, dispatch } = React.useContext<IThemeContext>(
+    ThemeChangerContext
+  );
   return (
     <section id="hackthon">
-      <div className={hackthon.hackthon}>
+      <div
+        className={
+          themes === "default" ? hackthon.hackthon : hackthon.hackthonBlue
+        }
+      >
         <h1>hackthon</h1>
         {myHackthons.map((myHackthon, idx) => (
           <div className={hackthon.video} key={idx}>

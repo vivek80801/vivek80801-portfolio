@@ -2,7 +2,7 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.container {
+%container {
   @include padding;
   @include flex;
   @include setTextColor($tertiary);
@@ -21,7 +21,7 @@
       grid-template-columns: 1fr 1fr;
     }
     @media screen and (max-width: 750px) {
-      grid-template-columns: 1fr ;
+      grid-template-columns: 1fr;
     }
     .skill {
       @include margin;
@@ -36,12 +36,25 @@
       height: 30vh;
       width: 30vw;
       @media screen and (max-width: 500px) {
-          height: 30vw;
-          width: 30vh;
+        height: 30vw;
+        width: 30vh;
       }
       p {
         overflow: auto;
       }
+    }
+  }
+}
+
+.container {
+  @extend %container;
+}
+.containerBlue {
+  @extend %container;
+  @include setTextColor($tertiaryBlue);
+  .skills {
+    .skill {
+      @include setTextColor($secondaryBlue);
     }
   }
 }

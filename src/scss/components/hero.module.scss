@@ -2,80 +2,42 @@
 @import "../utill/function.scss";
 @import "../utill/mixin.scss";
 
-.hero {
+%hero {
   @include flex;
   @include setTextColor($secondary);
   flex-direction: column;
   width: 100%;
   height: 90vh;
-  .img1 {
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 1rem;
-    animation: fadeIn1 1s ease-in 9s infinite;
-    .img2 {
+  .img {
+    img {
       border-radius: 50%;
-      background-color: transparent;
-      animation: fadeIn2 1s ease-in 8s infinite;
-      padding: 0.9rem;
-      .img3 {
-        border-radius: 50%;
+      height: 20vh;
+      width: 10vw;
+    }
+  }
+}
+
+.heroDefault {
+  @extend %hero;
+}
+
+.heroBlue {
+  @extend %hero;
+  @include setTextColor($secondaryBlue);
+}
+
+@mixin fadeIn($color, $name) {
+  @for $i from 1 to 10 {
+    @keyframes fadeIn#name#{$i} {
+      0% {
         background-color: transparent;
-        padding: 0.8rem;
-        animation: fadeIn3 1s ease-in 7s infinite;
-        .img4 {
-          border-radius: 50%;
-          padding: 0.7rem;
-          background-color: transparent;
-          animation: fadeIn4 1s ease-in 6s infinite;
-          .img5 {
-            border-radius: 50%;
-            padding: 0.6rem;
-            background-color: transparent;
-            animation: fadeIn5 1s ease-in 5s infinite;
-            .img6 {
-              border-radius: 50%;
-              padding: 0.5rem;
-              animation: fadeIn6 1s ease-in 4s infinite;
-              background-color: transparent;
-              .img7 {
-                border-radius: 50%;
-                padding: 0.4rem;
-                background-color: transparent;
-                animation: fadeIn7 1s ease-in 3s infinite;
-                .img8 {
-                  border-radius: 50%;
-                  padding: 0.3rem;
-                  background-color: transparent;
-                  animation: fadeIn8 1s ease-in 2s infinite;
-                  .img9 {
-                    border-radius: 50%;
-                    background-color: transparent;
-                    padding: 0.2rem;
-                    animation: fadeIn9 1s ease-in 1s infinite;
-                    img {
-                      height: 20vh;
-                      width: 20vh;
-                      border-radius: 50%;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
+      }
+      100% {
+        background-color: lighten(darken($color, 20), ($i * 5));
       }
     }
   }
 }
 
-@for $i from 1 to 10 {
-  @keyframes fadeIn#{$i} {
-    0% {
-      background-color: transparent;
-    }
-    100% {
-      background-color: lighten(darken($primary, 20), ($i * 5));
-    }
-  }
-}
+@include fadeIn($primary, Default);
+@include fadeIn($primaryBlue, Blue);
