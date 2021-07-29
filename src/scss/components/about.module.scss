@@ -14,6 +14,9 @@
     @include padding;
     @include margin;
     width: 50%;
+    a {
+      @include setTextColor($secondary);
+    }
   }
 }
 
@@ -24,19 +27,39 @@
 .aboutBlue {
   @extend %about;
   @include setTextColor($secondaryBlue);
+  p {
+    a {
+      @include setTextColor($secondaryBlue);
+    }
+  }
 }
 
 .aboutPink {
   @extend %about;
   @include setTextColor($secondaryPink);
+  p {
+    a {
+      @include setTextColor($secondaryPink);
+    }
+  }
 }
 
 .aboutLightBlue {
   @extend %about;
   @include setTextColor($secondaryLightBlue);
+  p {
+    a {
+      @include setTextColor($secondaryLightBlue);
+    }
+  }
 }
 
 .aboutYellow {
   @extend %about;
   @include setTextColor($secondaryYellow);
+  p {
+    a {
+      @include setTextColor($secondaryYellow);
+    }
+  }
 }

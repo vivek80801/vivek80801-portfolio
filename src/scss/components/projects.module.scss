@@ -53,7 +53,7 @@
       }
       a {
         @include margin;
-        color: #fff;
+        @include setTextColor($tertiary);
       }
     }
   }
@@ -74,6 +74,9 @@
           @include setTextColor($tertiaryBlue);
         }
       }
+      a {
+        @include setTextColor($secondaryBlue);
+      }
     }
   }
 }
@@ -88,6 +91,9 @@
         button {
           @include setTextColor($tertiaryPink);
         }
+      }
+      a {
+        @include setTextColor($secondaryPink);
       }
     }
   }
@@ -104,6 +110,9 @@
           @include setTextColor($tertiaryLightBlue);
         }
       }
+      a {
+        @include setTextColor($secondaryLightBlue);
+      }
     }
   }
 }
@@ -118,6 +127,9 @@
         button {
           @include setTextColor($tertiaryYellow);
         }
+      }
+      a {
+        @include setTextColor($secondaryYellow);
       }
     }
   }

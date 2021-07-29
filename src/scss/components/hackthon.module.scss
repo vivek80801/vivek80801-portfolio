@@ -1,6 +1,7 @@
 @import "../utill/_variable.scss";
 @import "../utill/_function.scss";
 @import "../utill/_mixin.scss";
+
 %hackthon {
   @include setTextColor($secondary);
   @include padding;
@@ -37,19 +38,39 @@
 .hackthonBlue {
   @extend %hackthon;
   @include setTextColor($secondaryBlue);
+  .video {
+    a {
+      @include setTextColor($secondaryBlue);
+    }
+  }
 }
 
 .hackthonPink {
   @extend %hackthon;
   @include setTextColor($secondaryPink);
+  .video {
+    a {
+      @include setTextColor($secondaryPink);
+    }
+  }
 }
 
 .hackthonLightBlue {
   @extend %hackthon;
   @include setTextColor($secondaryLightBlue);
+  .video {
+    a {
+      @include setTextColor($secondaryLightBlue);
+    }
+  }
 }
 
 .hackthonYellow {
   @extend %hackthon;
   @include setTextColor($secondaryYellow);
+  .video {
+    a {
+      @include setTextColor($secondaryYellow);
+    }
+  }
 }
