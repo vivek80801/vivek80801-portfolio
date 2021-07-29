@@ -13,7 +13,17 @@ const Footer: React.FC = (): JSX.Element => {
     <footer>
       <div
         id="social"
-        className={themes === "default" ? footer.footer : footer.footerBlue}
+        className={
+          themes === "blue"
+            ? footer.footerBlue
+            : themes === "pink"
+            ? footer.footerPink
+            : themes === "lightBlue"
+            ? footer.footerLightBlue
+            : themes === "yellow"
+            ? footer.footerYellow
+            : footer.footer
+        }
       >
         <h1>connect with me</h1>
         <div className={footer.social}>

@@ -38,3 +38,39 @@
     }
   }
 }
+
+.footerPink {
+  @extend %footer;
+  @include setTextColor($secondaryPink);
+  .social {
+    a {
+      &:hover {
+        color: $quaternaryPink;
+      }
+    }
+  }
+}
+
+.footerLightBlue {
+  @extend %footer;
+  @include setTextColor($secondaryLightBlue);
+  .social {
+    a {
+      &:hover {
+        color: $quaternaryLightBlue;
+      }
+    }
+  }
+}
+
+.footerYellow {
+  @extend %footer;
+  @include setTextColor($secondaryYellow);
+  .social {
+    a {
+      &:hover {
+        color: $quaternaryYellow;
+      }
+    }
+  }
+}

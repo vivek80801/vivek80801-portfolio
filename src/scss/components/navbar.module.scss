@@ -83,6 +83,75 @@
   }
 }
 
+.desktopPink {
+  @extend %desktop;
+  @include setTextColor($primaryPink);
+  ul {
+    li {
+      a {
+        @include setTextColor($primaryPink);
+        &:hover {
+          @include setTextColor($secondaryPink);
+        }
+      }
+      ul {
+        @include setTextColor(darken($primaryPink, 2));
+        li {
+          &:hover {
+            @include setTextColor(lighten($primaryPink, 1));
+          }
+        }
+      }
+    }
+  }
+}
+
+.desktopLightBlue {
+  @extend %desktop;
+  @include setTextColor($primaryLightBlue);
+  ul {
+    li {
+      a {
+        @include setTextColor($primaryLightBlue);
+        &:hover {
+          @include setTextColor($secondaryLightBlue);
+        }
+      }
+      ul {
+        @include setTextColor(darken($primaryLightBlue, 2));
+        li {
+          &:hover {
+            @include setTextColor(lighten($primaryLightBlue, 1));
+          }
+        }
+      }
+    }
+  }
+}
+
+.desktopYellow {
+  @extend %desktop;
+  @include setTextColor($primaryYellow);
+  ul {
+    li {
+      a {
+        @include setTextColor($primaryYellow);
+        &:hover {
+          @include setTextColor($secondaryYellow);
+        }
+      }
+      ul {
+        @include setTextColor(darken($primaryYellow, 2));
+        li {
+          &:hover {
+            @include setTextColor(lighten($primaryYellow, 1));
+          }
+        }
+      }
+    }
+  }
+}
+
 %mobile {
   @include padding;
   @include setTextColor($primary);
@@ -120,7 +189,7 @@
       }
       ul {
         @include setTextColor(darken($primary, 2));
-        top: 42vh;
+        top: 47vh;
         li {
           &:hover {
             @include setTextColor(lighten($primary, 1));
@@ -138,6 +207,7 @@
     display: flex;
   }
 }
+
 .mobile {
   @extend %mobile;
 }
@@ -156,6 +226,69 @@
         li {
           &:hover {
             @include setTextColor(lighten($primaryBlue, 1));
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobilePink {
+  @extend %mobile;
+  @include setTextColor($primaryPink);
+  ul {
+    @include setTextColor($tertiaryPink);
+    li {
+      a {
+        @include setTextColor($tertiaryPink);
+      }
+      ul {
+        @include setTextColor(darken($primaryPink, 2));
+        li {
+          &:hover {
+            @include setTextColor(lighten($primaryPink, 1));
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobileLightBlue {
+  @extend %mobile;
+  @include setTextColor($primaryLightBlue);
+  ul {
+    @include setTextColor($tertiaryLightBlue);
+    li {
+      a {
+        @include setTextColor($tertiaryLightBlue);
+      }
+      ul {
+        @include setTextColor(darken($primaryLightBlue, 2));
+        li {
+          &:hover {
+            @include setTextColor(lighten($primaryLightBlue, 1));
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobileYellow {
+  @extend %mobile;
+  @include setTextColor($primaryYellow);
+  ul {
+    @include setTextColor($tertiaryYellow);
+    li {
+      a {
+        @include setTextColor($tertiaryYellow);
+      }
+      ul {
+        @include setTextColor(darken($primaryYellow, 2));
+        li {
+          &:hover {
+            @include setTextColor(lighten($primaryYellow, 1));
           }
         }
       }

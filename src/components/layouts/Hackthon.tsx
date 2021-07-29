@@ -11,7 +11,15 @@ const Hackthon: React.FC = (): JSX.Element => {
     <section id="hackthon">
       <div
         className={
-          themes === "default" ? hackthon.hackthon : hackthon.hackthonBlue
+          themes === "blue"
+            ? hackthon.hackthonBlue
+            : themes === "pink"
+            ? hackthon.hackthonPink
+            : themes === "lightBlue"
+            ? hackthon.hackthonLightBlue
+            : themes === "yellow"
+            ? hackthon.hackthonYellow
+            : hackthon.hackthon
         }
       >
         <h1>hackthon</h1>

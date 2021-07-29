@@ -17,7 +17,15 @@ const Projects: React.FC = (): JSX.Element => {
       <div
         id="projects"
         className={
-          themes === "default" ? project.container : project.containerBlue
+          themes === "blue"
+            ? project.containerBlue
+            : themes === "pink"
+            ? project.containerPink
+            : themes === "lightBlue"
+            ? project.containerLightBlue
+            : themes === "yellow"
+            ? project.containerYellow
+            : project.container
         }
       >
         <h1>my projects</h1>

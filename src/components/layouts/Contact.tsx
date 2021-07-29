@@ -11,7 +11,15 @@ const Contact: React.FC = (): JSX.Element => {
       <div
         id="contact"
         className={
-          themes === "default" ? contact.container : contact.containerBlue
+          themes === "blue"
+            ? contact.containerBlue
+            : themes === "pink"
+            ? contact.containerPink
+            : themes === "lightBlue"
+            ? contact.containerLightBlue
+            : themes === "yellow"
+            ? contact.containerYellow
+            : contact.container
         }
       >
         <h1>contact me</h1>
@@ -46,7 +54,17 @@ const Contact: React.FC = (): JSX.Element => {
             ></textarea>
           </div>
           <input
-            className={themes === "default" ? "btn-primary" : "btn-primaryBlue"}
+            className={
+              themes === "blue"
+                ? "btn-primaryBlue"
+                : themes === "pink"
+                ? "btn-primaryPink"
+                : themes === "lightBlue"
+                ? "btn-primaryLightBlue"
+                : themes === "yellow"
+                ? "btn-primaryYellow"
+                : "btn-primary"
+            }
             type="submit"
             value="submit"
           />

@@ -1,7 +1,7 @@
 import React from "react";
 import { IAction, themeReducer } from "./reducer";
 
-export type Themes = "default" | "blue";
+export type Themes = "default" | "blue" | "pink" | "lightBlue" | "yellow";
 
 export interface IThemeContext {
   themes: Themes;

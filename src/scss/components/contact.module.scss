@@ -24,10 +24,27 @@
     }
   }
 }
+
 .container {
   @extend %container;
 }
+
 .containerBlue {
   @extend %container;
   @include setTextColor($tertiaryBlue);
+}
+
+.containerPink {
+  @extend %container;
+  @include setTextColor($tertiaryPink);
+}
+
+.containerLightBlue {
+  @extend %container;
+  @include setTextColor($tertiaryLightBlue);
+}
+
+.containerYellow {
+  @extend %container;
+  @include setTextColor($tertiaryYellow);
 }

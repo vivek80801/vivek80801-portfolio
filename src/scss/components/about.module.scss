@@ -20,7 +20,23 @@
 .about {
   @extend %about;
 }
+
 .aboutBlue {
   @extend %about;
   @include setTextColor($secondaryBlue);
+}
+
+.aboutPink {
+  @extend %about;
+  @include setTextColor($secondaryPink);
+}
+
+.aboutLightBlue {
+  @extend %about;
+  @include setTextColor($secondaryLightBlue);
+}
+
+.aboutYellow {
+  @extend %about;
+  @include setTextColor($secondaryYellow);
 }

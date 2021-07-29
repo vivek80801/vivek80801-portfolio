@@ -10,6 +10,15 @@ export const themeReducer = (state: Themes = "default", action: IAction) => {
     case "blue":
       return "blue";
 
+    case "pink":
+      return "pink";
+
+    case "lightBlue":
+      return "lightBlue";
+
+    case "yellow":
+      return "yellow";
+
     default:
       return state;
   }

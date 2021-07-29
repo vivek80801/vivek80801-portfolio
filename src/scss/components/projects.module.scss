@@ -78,6 +78,51 @@
   }
 }
 
+.containerPink {
+  @extend %container;
+  @include setTextColor($tertiaryPink);
+  .projects {
+    .project {
+      @include setTextColor($secondaryPink);
+      .sliders {
+        button {
+          @include setTextColor($tertiaryPink);
+        }
+      }
+    }
+  }
+}
+
+.containerLightBlue {
+  @extend %container;
+  @include setTextColor($tertiaryLightBlue);
+  .projects {
+    .project {
+      @include setTextColor($secondaryLightBlue);
+      .sliders {
+        button {
+          @include setTextColor($tertiaryLightBlue);
+        }
+      }
+    }
+  }
+}
+
+.containerYellow {
+  @extend %container;
+  @include setTextColor($tertiaryYellow);
+  .projects {
+    .project {
+      @include setTextColor($secondaryYellow);
+      .sliders {
+        button {
+          @include setTextColor($tertiaryYellow);
+        }
+      }
+    }
+  }
+}
+
 @keyframes moveUp {
   0% {
     transform: translateY(20vh);

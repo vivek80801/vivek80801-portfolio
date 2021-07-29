@@ -13,7 +13,15 @@ const Navbar: React.FC = (): JSX.Element => {
     <>
       <nav
         className={
-          themes === "blue" ? navbar.desktopBlue : navbar.desktopDefault
+          themes === "blue"
+            ? navbar.desktopBlue
+            : themes === "pink"
+            ? navbar.desktopPink
+            : themes === "lightBlue"
+            ? navbar.desktopLightBlue
+            : themes === "yellow"
+            ? navbar.desktopYellow
+            : navbar.desktopDefault
         }
       >
         <img src="/assets/github-avtar.png" alt="vivek80801" />
@@ -53,13 +61,29 @@ const Navbar: React.FC = (): JSX.Element => {
               <ul>
                 <li onClick={() => dispatch({ name: "default" })}>default</li>
                 <li onClick={() => dispatch({ name: "blue" })}>blue</li>
-                <li></li>
+                <li onClick={() => dispatch({ name: "pink" })}>pink</li>
+                <li onClick={() => dispatch({ name: "lightBlue" })}>
+                  light blue
+                </li>
+                <li onClick={() => dispatch({ name: "yellow" })}>yellow</li>
               </ul>
             )}
           </li>
         </ul>
       </nav>
-      <nav className={themes === "default" ? navbar.mobile : navbar.mobileBlue}>
+      <nav
+        className={
+          themes === "blue"
+            ? navbar.mobileBlue
+            : themes === "pink"
+            ? navbar.mobilePink
+            : themes === "lightBlue"
+            ? navbar.mobileLightBlue
+            : themes === "yellow"
+            ? navbar.mobileYellow
+            : navbar.mobile
+        }
+      >
         <img src="/assets/github-avtar.png" alt="vivek80801" />
         <div className={navbar.lines} onClick={() => setShowNav(!showNav)}>
           <div className={navbar.line}></div>
@@ -102,7 +126,11 @@ const Navbar: React.FC = (): JSX.Element => {
               <ul>
                 <li onClick={() => dispatch({ name: "default" })}>default</li>
                 <li onClick={() => dispatch({ name: "blue" })}>blue</li>
-                <li></li>
+                <li onClick={() => dispatch({ name: "pink" })}>pink</li>
+                <li onClick={() => dispatch({ name: "lightBlue" })}>
+                  light blue
+                </li>
+                <li onClick={() => dispatch({ name: "yellow" })}>yellow</li>
               </ul>
             )}
           </li>

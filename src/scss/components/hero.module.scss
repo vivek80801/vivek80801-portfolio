@@ -8,11 +8,63 @@
   flex-direction: column;
   width: 100%;
   height: 90vh;
-  .img {
-    img {
+  .img1 {
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 1rem;
+    animation: fadeIn1 1s ease-in 9s infinite;
+    .img2 {
       border-radius: 50%;
-      height: 20vh;
-      width: 10vw;
+      background-color: transparent;
+      animation: fadeIn2 1s ease-in 8s infinite;
+      padding: 0.9rem;
+      .img3 {
+        border-radius: 50%;
+        background-color: transparent;
+        padding: 0.8rem;
+        animation: fadeIn3 1s ease-in 7s infinite;
+        .img4 {
+          border-radius: 50%;
+          padding: 0.7rem;
+          background-color: transparent;
+          animation: fadeIn4 1s ease-in 6s infinite;
+          .img5 {
+            border-radius: 50%;
+            padding: 0.6rem;
+            background-color: transparent;
+            animation: fadeIn5 1s ease-in 5s infinite;
+            .img6 {
+              border-radius: 50%;
+              padding: 0.5rem;
+              animation: fadeIn6 1s ease-in 4s infinite;
+              background-color: transparent;
+              .img7 {
+                border-radius: 50%;
+                padding: 0.4rem;
+                background-color: transparent;
+                animation: fadeIn7 1s ease-in 3s infinite;
+                .img8 {
+                  border-radius: 50%;
+                  padding: 0.3rem;
+                  background-color: transparent;
+                  animation: fadeIn8 1s ease-in 2s infinite;
+                  .img9 {
+                    border-radius: 50%;
+                    background-color: transparent;
+                    padding: 0.2rem;
+                    animation: fadeIn9 1s ease-in 1s infinite;
+                    img {
+                      height: 20vh;
+                      width: 20vh;
+                      border-radius: 50%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -24,20 +76,182 @@
 .heroBlue {
   @extend %hero;
   @include setTextColor($secondaryBlue);
-}
-
-@mixin fadeIn($color, $name) {
-  @for $i from 1 to 10 {
-    @keyframes fadeIn#name#{$i} {
-      0% {
-        background-color: transparent;
-      }
-      100% {
-        background-color: lighten(darken($color, 20), ($i * 5));
+  .img1 {
+    animation: fadeInBlue1 1s ease-in 9s infinite;
+    .img2 {
+      animation: fadeInBlue2 1s ease-in 8s infinite;
+      .img3 {
+        animation: fadeInBlue3 1s ease-in 7s infinite;
+        .img4 {
+          animation: fadeInBlue4 1s ease-in 6s infinite;
+          .img5 {
+            animation: fadeInBlue5 1s ease-in 5s infinite;
+            .img6 {
+              animation: fadeInBlue5 1s ease-in 4s infinite;
+              .img7 {
+                animation: fadeInBlue7 1s ease-in 3s infinite;
+                .img8 {
+                  animation: fadeInBlue8 1s ease-in 2s infinite;
+                  .img9 {
+                    animation: fadeInBlue9 1s ease-in 1s infinite;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-@include fadeIn($primary, Default);
-@include fadeIn($primaryBlue, Blue);
+.heroPink {
+  @extend %hero;
+  @include setTextColor($secondaryPink);
+  .img1 {
+    animation: fadeInPink1 1s ease-in 9s infinite;
+    .img2 {
+      animation: fadeInPink2 1s ease-in 8s infinite;
+      .img3 {
+        animation: fadeInPink3 1s ease-in 7s infinite;
+        .img4 {
+          animation: fadeInPink4 1s ease-in 6s infinite;
+          .img5 {
+            animation: fadeInPink5 1s ease-in 5s infinite;
+            .img6 {
+              animation: fadeInPink5 1s ease-in 4s infinite;
+              .img7 {
+                animation: fadeInPink7 1s ease-in 3s infinite;
+                .img8 {
+                  animation: fadeInPink8 1s ease-in 2s infinite;
+                  .img9 {
+                    animation: fadeInPink9 1s ease-in 1s infinite;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.heroLightBlue {
+  @extend %hero;
+  @include setTextColor($secondaryLightBlue);
+  .img1 {
+    animation: fadeInLightBlue1 1s ease-in 9s infinite;
+    .img2 {
+      animation: fadeInLightBlue2 1s ease-in 8s infinite;
+      .img3 {
+        animation: fadeInLightBlue3 1s ease-in 7s infinite;
+        .img4 {
+          animation: fadeInLightBlue4 1s ease-in 6s infinite;
+          .img5 {
+            animation: fadeInLightBlue5 1s ease-in 5s infinite;
+            .img6 {
+              animation: fadeInLightBlue5 1s ease-in 4s infinite;
+              .img7 {
+                animation: fadeInLightBlue7 1s ease-in 3s infinite;
+                .img8 {
+                  animation: fadeInLightBlue8 1s ease-in 2s infinite;
+                  .img9 {
+                    animation: fadeInLightBlue9 1s ease-in 1s infinite;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.heroYellow {
+  @extend %hero;
+  @include setTextColor($secondaryYellow);
+  .img1 {
+    animation: fadeInYellow1 1s ease-in 9s infinite;
+    .img2 {
+      animation: fadeInYellow2 1s ease-in 8s infinite;
+      .img3 {
+        animation: fadeInYellow3 1s ease-in 7s infinite;
+        .img4 {
+          animation: fadeInYellow4 1s ease-in 6s infinite;
+          .img5 {
+            animation: fadeInYellow5 1s ease-in 5s infinite;
+            .img6 {
+              animation: fadeInYellow5 1s ease-in 4s infinite;
+              .img7 {
+                animation: fadeInYellow7 1s ease-in 3s infinite;
+                .img8 {
+                  animation: fadeInYellow8 1s ease-in 2s infinite;
+                  .img9 {
+                    animation: fadeInYellow9 1s ease-in 1s infinite;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 to 10 {
+  @keyframes fadeIn#{$i} {
+    0% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: lighten(darken($primary, 20), ($i * 5));
+    }
+  }
+}
+
+@for $i from 1 to 10 {
+  @keyframes fadeInBlue#{$i} {
+    0% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: lighten(darken($primaryBlue, 20), ($i * 5));
+    }
+  }
+}
+
+@for $i from 1 to 10 {
+  @keyframes fadeInPink#{$i} {
+    0% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: lighten(darken($primaryPink, 20), ($i * 5));
+    }
+  }
+}
+
+@for $i from 1 to 10 {
+  @keyframes fadeInLightBlue#{$i} {
+    0% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: lighten(darken($primaryLightBlue, 20), ($i * 5));
+    }
+  }
+}
+
+@for $i from 1 to 10 {
+  @keyframes fadeInYellow#{$i} {
+    0% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: lighten(darken($primaryYellow, 20), ($i * 5));
+    }
+  }
+}

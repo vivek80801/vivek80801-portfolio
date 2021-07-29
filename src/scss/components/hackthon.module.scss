@@ -29,10 +29,27 @@
     width: 50vw;
   }
 }
+
 .hackthon {
   @extend %hackthon;
 }
+
 .hackthonBlue {
   @extend %hackthon;
   @include setTextColor($secondaryBlue);
+}
+
+.hackthonPink {
+  @extend %hackthon;
+  @include setTextColor($secondaryPink);
+}
+
+.hackthonLightBlue {
+  @extend %hackthon;
+  @include setTextColor($secondaryLightBlue);
+}
+
+.hackthonYellow {
+  @extend %hackthon;
+  @include setTextColor($secondaryYellow);
 }

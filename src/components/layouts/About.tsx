@@ -10,7 +10,17 @@ const About: React.FC = (): JSX.Element => {
     <section>
       <div
         id="about"
-        className={themes === "default" ? about.about : about.aboutBlue}
+        className={
+          themes === "blue"
+            ? about.aboutBlue
+            : themes === "pink"
+            ? about.aboutPink
+            : themes === "lightBlue"
+            ? about.aboutLightBlue
+            : themes === "yellow"
+            ? about.aboutYellow
+            : about.about
+        }
       >
         <h1>about me</h1>
         <p>

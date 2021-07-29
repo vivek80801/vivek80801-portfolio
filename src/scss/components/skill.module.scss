@@ -49,12 +49,43 @@
 .container {
   @extend %container;
 }
+
 .containerBlue {
   @extend %container;
   @include setTextColor($tertiaryBlue);
   .skills {
     .skill {
       @include setTextColor($secondaryBlue);
+    }
+  }
+}
+
+.containerPink {
+  @extend %container;
+  @include setTextColor($tertiaryPink);
+  .skills {
+    .skill {
+      @include setTextColor($secondaryPink);
+    }
+  }
+}
+
+.containerLightBlue {
+  @extend %container;
+  @include setTextColor($tertiaryLightBlue);
+  .skills {
+    .skill {
+      @include setTextColor($secondaryLightBlue);
+    }
+  }
+}
+
+.containerYellow {
+  @extend %container;
+  @include setTextColor($tertiaryYellow);
+  .skills {
+    .skill {
+      @include setTextColor($secondaryYellow);
     }
   }
 }

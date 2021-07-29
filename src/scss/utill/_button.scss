@@ -7,3 +7,18 @@
 @include createBtn($secondaryBlue, secondaryBlue);
 @include createBtn($tertiaryBlue, tertiaryBlue);
 @include createBtn($quaternaryBlue, quaternaryBlue);
+
+@include createBtn($primaryPink, primaryPink);
+@include createBtn($secondaryPink, secondaryPink);
+@include createBtn($tertiaryPink, tertiaryPink);
+@include createBtn($quaternaryPink, quaternaryPink);
+
+@include createBtn($primaryLightBlue, primaryLightBlue);
+@include createBtn($secondaryLightBlue, secondaryLightBlue);
+@include createBtn($tertiaryLightBlue, tertiaryLightBlue);
+@include createBtn($quaternaryLightBlue, quaternaryLightBlue);
+
+@include createBtn($primaryYellow, primaryYellow);
+@include createBtn($secondaryYellow, secondaryYellow);
+@include createBtn($tertiaryYellow, tertiaryYellow);
+@include createBtn($quaternaryYellow, quaternaryYellow);

@@ -20,7 +20,17 @@ const Skill: React.FC = (): JSX.Element => {
     <section>
       <div
         id="skill"
-        className={themes === "default" ? skill.container : skill.containerBlue}
+        className={
+          themes === "blue"
+            ? skill.containerBlue
+            : themes === "pink"
+            ? skill.containerPink
+            : themes === "lightBlue"
+            ? skill.containerLightBlue
+            : themes === "yellow"
+            ? skill.containerYellow
+            : skill.container
+        }
       >
         <h1>my skills</h1>
         <div className={skill.skills}>
