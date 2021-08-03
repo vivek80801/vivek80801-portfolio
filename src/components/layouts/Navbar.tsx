@@ -1,5 +1,5 @@
 import React from "react";
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown, FaWindowClose } from "react-icons/fa";
 import navbar from "../../scss/components/navbar.module.scss";
 import { ThemeChangerContext, IThemeContext } from "../context";
 
@@ -55,7 +55,12 @@ const Navbar: React.FC = (): JSX.Element => {
                 setShowThemes(!showThemes);
               }}
             >
-              Themes <FaAngleDown size={20} />
+              Themes
+              {showThemes ? (
+                <FaWindowClose size={20} />
+              ) : (
+                <FaAngleDown size={20} />
+              )}
             </a>
             {showThemes && (
               <ul>

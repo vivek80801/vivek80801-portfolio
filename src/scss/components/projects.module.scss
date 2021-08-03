@@ -53,7 +53,7 @@
       }
       a {
         @include margin;
-        @include setTextColor($tertiary);
+        @include setTextColor($secondary);
       }
     }
   }
