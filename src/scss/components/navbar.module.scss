@@ -189,7 +189,7 @@
       }
       ul {
         @include setTextColor(darken($primary, 2));
-        top: 47vh;
+        top: 55vh;
         li {
           &:hover {
             @include setTextColor(lighten($primary, 1));

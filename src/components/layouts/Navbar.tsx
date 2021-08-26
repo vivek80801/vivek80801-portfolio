@@ -1,9 +1,15 @@
 import React from "react";
-import { FaAngleDown, FaWindowClose } from "react-icons/fa";
+import { FaAngleDown, FaWindowClose, FaHome } from "react-icons/fa";
+import { GiSkills } from "react-icons/gi";
+import { FcAbout } from "react-icons/fc";
+import { GrProjects, GrConnect } from "react-icons/gr";
+import { MdEvent } from "react-icons/md";
+import { AiFillContacts } from "react-icons/ai";
 import navbar from "../../scss/components/navbar.module.scss";
 import { ThemeChangerContext, IThemeContext } from "../context";
 
 const Navbar: React.FC = (): JSX.Element => {
+  const size = 20;
   const [showNav, setShowNav] = React.useState(false);
   const [showThemes, setShowThemes] = React.useState(false);
   const { themes, dispatch } = React.useContext<IThemeContext>(
@@ -27,25 +33,39 @@ const Navbar: React.FC = (): JSX.Element => {
         <img src="/assets/github-avtar.png" alt="vivek80801" />
         <ul>
           <li>
-            <a href="#">home</a>
+            <a href="#">
+              <FaHome size={size} />
+            </a>
           </li>
           <li>
-            <a href="#skill">skill</a>
+            <a href="#skill">
+              <GiSkills size={size} />
+            </a>
           </li>
           <li>
-            <a href="#about">about</a>
+            <a href="#about">
+              <FcAbout size={size} />
+            </a>
           </li>
           <li>
-            <a href="#projects">project</a>
+            <a href="#projects">
+              <GrProjects size={size} />
+            </a>
           </li>
           <li>
-            <a href="#hackthon">hackthon</a>
+            <a href="#hackthon">
+              <MdEvent size={size} />
+            </a>
           </li>
           <li>
-            <a href="#contact">contact me</a>
+            <a href="#contact">
+              <AiFillContacts size={size} />
+            </a>
           </li>
           <li>
-            <a href="#social">social</a>
+            <a href="#social">
+              <GrConnect size={size} />
+            </a>
           </li>
           <li>
             <a
@@ -125,7 +145,12 @@ const Navbar: React.FC = (): JSX.Element => {
                 setShowThemes(!showThemes);
               }}
             >
-              Themes <FaAngleDown size={20} />
+              Themes
+              {showThemes ? (
+                <FaWindowClose size={20} />
+              ) : (
+                <FaAngleDown size={20} />
+              )}
             </a>
             {showThemes && (
               <ul>
